@@ -1,4 +1,5 @@
 ## ディレクトリ構成
+
 project_root/
 ├── data/
 │   ├── raw/                # 生データ（ダウンロードしたデータをそのまま保存）
@@ -18,35 +19,40 @@ project_root/
 ├── README.md               # プロジェクトの概要説明
 └── .gitignore              # Gitで無視するファイルやフォルダ
 
+---
 
 ## それぞれのデータの情報の整理
+
+### train, train_add columns
+- **id** : 試合管理ID
+- **y** : 観客動員数(目的変数)
+- **year** : 試合の開催年
+- **stage** : 所属リーグ(J1, J2)
+- **match** : 試合日程情報
+- **gameday** : 試合日
+- **time** : キックオフ時間
+- **home** : ホームチーム(開催スタジアムを本拠地とするチーム)
+- **away** : アウェイチーム
+- **stadium** : 開催スタジアム名
+- **tv** : 試合のLIVE放送サービス
+
 ---
-train, train_add colmuns
-id : 試合管理ID
-y : 観客動員数(目的変数)
-year : 試合の開催年
-stage : 所属リーグ(J1, J2)
-match : 試合日程情報
-gameday : 試合日
-time : キックオフ時間
-home : ホームチーム(開催スタジアムを本拠地とするチーム)
-away : アウェイチーム
-stadium : 開催スタジアム名
-tv : 試合のLIVE放送サービス
+
+### condition, condition_add columns
+- **id** : 試合管理ID
+- **home_score** : ホームチームのスコア
+- **away_score** : アウェイチームのスコア
+- **weather** : 天気
+- **temperature** : 気温
+- **humidity** : 湿度
+- **referee** : メイン審判名
+- **home_team** : ホームのチーム名
+- **home_01~home_11** : ホームチームのスターティングメンバー
+- **away_01~away_11** : アウェイチームのスターティングメンバー
+
 ---
-condition, condition_add columns
-id : 試合管理ID
-home_score : ホームチームのスコア
-away_score : アウェイチームのスコア
-weather : 天気
-temperature : 気温
-humidity : 湿度
-referee : メイン審判名
-home_team : ホームのチーム名
-home_01~home_11 : ホームチームのスターティングメンバー
-away_01~away_11 : アウェイチームのスターティングメンバー
----
-stadium columns
-name : スタジアム名
-address : スタジアムの住所
-capa : スタジアムの収容人数
+
+### stadium columns
+- **name** : スタジアム名
+- **address** : スタジアムの住所
+- **capa** : スタジアムの収容人数

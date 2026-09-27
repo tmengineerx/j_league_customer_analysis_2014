@@ -1,0 +1,8 @@
+# 仮想環境を無視
+.venv/
+
+# Jupyter Notebookの出力を無視
+.ipynb_checkpoints/
+
+# データファイルを無視（必要に応じて）
+data/raw/
